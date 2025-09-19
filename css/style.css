@@ -1,0 +1,486 @@
+/* Reset và font chính */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container chính */
+#TrangWeb {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #990000; /* đỏ đậm */
+  box-sizing: border-box; /* padding và border tính trong width */
+}
+
+/* Phần đầu - banner + header */
+#PhanDau {
+  width: 1000px;
+  height: 140px;
+  background: url(../images/banner.svg);
+  text-align: right;
+  vertical-align: middle;
+  color: #990000;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-bottom: 1px solid #990000;
+}
+
+/* Menu trên */
+#PhanMenu1,
+#PhanMenu2 {
+  height: 30px;
+  background: #ffffff;
+  color: #990000;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-top: 1px solid #990000;
+}
+
+#PhanMenu1 {
+  float: left;
+}
+
+#PhanMenu2 {
+  margin-left: auto;
+  text-align: right;
+}
+
+#PhanMenu1 a,
+#PhanMenu2 a {
+  color: #990000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 2px 4px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+#PhanMenu1 a:hover,
+#PhanMenu2 a:hover {
+  color: #b20600;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+/* Container giữa: dùng flex để chia layout trái - giữa */
+#PhanGiua {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #990000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Bên trái */
+#BenTrai {
+  width: 180px;
+  background-color: #fff;
+  color: #990000;
+  border: 1px solid #990000;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+#BenTrai h3 {
+  text-align: center;
+  background-color: #990000;
+  color: #fff;
+  padding: 2px 2px;
+  border-radius: 4px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#BenTrai ul li:hover {
+  background-color: #f0f0f0;
+}
+
+#BenTrai ul li a {
+  color: #990000;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: normal;
+}
+
+#BenTrai ul li a:hover {
+  color: #b20600;
+  font-weight: bold;
+}
+
+/* Phần giữa */
+#Giua {
+  flex-grow: 1;
+  background-color: #fff;
+  color: #212121;
+  border: 1px solid #990000;
+  padding: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#Giua h3 {
+  color: #990000;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#Giua h4 {
+  color: #b20600;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Phần cuối - Footer */
+#PhanCuoi {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #990000;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 3px solid #b20600;
+}
+
+#PhanCuoi a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+#PhanCuoi a:hover {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+/* Nút submit đồng bộ màu đỏ */
+input[type="submit"] {
+  margin-top: 1px;
+  border: 1px solid #990000;
+  padding: 4px 10px;
+  background-color: #990000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #b20600;
+}
+
+/* Menu trong #menudung */
+#menudung ul {
+  background: white;
+  width: 160px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#menudung li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 0.5em;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+#menudung li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+#menudung li:hover {
+  font-size: 13pt;
+  color: #ff0000;
+}
+
+/* Submenu */
+#menudung .sub-menu {
+  position: absolute;
+  left: 178px;
+  top: 0;
+  display: none;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 178px;
+  z-index: 10;
+}
+
+#menudung li:hover .sub-menu {
+  display: block;
+  font-size: 13pt;
+}
+
+/* Bài viết - danh sách và chi tiết */
+.tieude-baiviet {
+  color: #990000;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tieude-baiviet:hover {
+  color: #b20600;
+  text-decoration: none;
+}
+
+.baiviet-item {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  align-items: flex-start;
+}
+
+.baiviet-hinh {
+  flex-shrink: 0;
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.baiviet-noidung {
+  flex-grow: 1;
+  color: #212121;
+}
+
+.baiviet-noidung h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.baiviet-ngaydang {
+  color: gray;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.baiviet-tomtat {
+  margin-bottom: 10px;
+}
+
+.baiviet-chitiet {
+  text-align: right;
+}
+
+.baiviet-chitiet a {
+  color: #990000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.baiviet-chitiet a:hover {
+  color: #b20600;
+  text-decoration: underline;
+}
+
+/* Ảnh bài viết chi tiết */
+.HinhAnh-ChuThich {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.baivietchitiet-hinh {
+  width: 90%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.ChuThichAnh {
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  margin-top: -10px;
+  text-align: center;
+}
+
+/* Thông tin bài viết */
+.ThongTin {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+/* Tóm tắt bài viết */
+.TomTat {
+  font-style: italic;
+  font-size: 16px;
+  color: #444444;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Nội dung bài viết */
+.NoiDung {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #212121;
+  margin-bottom: 30px;
+  word-wrap: break-word;
+}
+
+/* Tin khác */
+.tin-khac {
+  background-color: transparent; /* giữ trong suốt */
+  border: 1px solid #f1c0c0; /* viền nhẹ */
+  padding: 12px 16px; /* nhỏ hơn chút */
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: none;
+  font-size: 14px; /* chữ nhỏ hơn */
+  color: #990000; /* màu đỏ đậm chủ đạo */
+}
+
+.tin-khac h4 {
+  font-size: 1.1em; /* nhỏ hơn trước */
+  margin-bottom: 12px;
+  color: #990000; /* đỏ đậm chủ đạo */
+  border-bottom: 2px solid #b20600; /* đỏ đậm hơn, cùng tone với menu */
+  padding-bottom: 6px;
+  font-weight: 600;
+}
+
+.tin-khac ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.tin-khac ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f5d6d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer; /* cho thấy có hover */
+}
+
+.tin-khac ul li:hover {
+  background-color: #f0f0f0; /* tô nền xám nguyên khung li khi hover */
+}
+
+.tin-khac ul li a.tieude-baiviet {
+  color: #990000;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.tin-khac ul li:hover a.tieude-baiviet {
+  color: #b20600; /* đỏ đậm hơn khi hover li */
+  text-decoration: none;
+}
+
+.tin-khac ul li a.tieude-baiviet:focus {
+  outline: 2px solid #b20600;
+  outline-offset: 2px;
+}
+
+.tin-khac ul li .ngay {
+  color: #999;
+  font-size: 0.8em; /* nhỏ hơn */
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+.phan-trang {
+  text-align: center;
+  margin: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.phan-trang a,
+.phan-trang span {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid #990000;
+  color: #990000;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.phan-trang a:hover {
+  background-color: #990000;
+  color: #fff;
+}
+
+.phan-trang .trang-hien-tai {
+  background-color: #990000;
+  color: white;
+  font-weight: bold;
+  border-color: #cc0000;
+  cursor: default;
+}
+
+/* Nút Trang trước / Trang sau hơi nổi bật hơn */
+.phan-trang a:first-child,
+.phan-trang a:last-child {
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+/* Disable cursor và màu với span trang hiện tại */
+.phan-trang .trang-hien-tai:hover {
+  background-color: #990000;
+  color: white;
+  cursor: default;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.alert-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+.alert-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
